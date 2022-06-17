@@ -1,0 +1,18 @@
+#servicing an image
+
+Get-WindowsImage -Mounted
+Get-WindowsImage -ImagePath E:\Source
+Remove-WindowsImage -ImagePath E:Source -Index 1
+
+Mount-WindowsImage -ImagePath E:\Source\install.wim -Index 1 -Path E:\source
+
+Add-WindowsPackage -Path E:\source -PackagePath E:\updates
+Add-Windows Driver -Path E:\source -Driver E:\Drivers -Recurse
+
+Get-WindowsOptionalFeature -Path E:\Source
+Get-WindowsOptionalFeature -Path E:\Demo | Where -Featurename -Like “*Print*
+Enable-WindowsOptionalFeature -Path E:\Source  -Featurename Printer
+
+Save-WindowImage -Path E:\Source
+
+Dismount-WindowsImage -Path E:\Source -Save
