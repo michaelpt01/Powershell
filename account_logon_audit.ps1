@@ -1,0 +1,1 @@
+Get-Aduser -SearchBase = “OU” -Filter {name -like “*myname*”} -Properties Name, LastLogon, Lockedout, LogonCount, badPasswordTime| Select-Name, @{Name = ‘LastLogon’;Expression= {[DateTime]::FromFileTime($._LastLogon)}},lockedout, logoncount, badPasswordTime | sort name
