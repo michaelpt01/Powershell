@@ -1,2 +1,1 @@
-$limit = (Get-Date).Add(-90)
-Get-ChildItem -path "UNC Path" -Recurse -Force | Where-Object { !$_.PSIsContainer -and $_.LastAccessTime -lt $limit} | Select-Object * | Export-CSV C:\......
+$p = gci -Recurse | where-object {$_.LastAccessTime -lt (Get-Date).AddDays(-90)} | Select-Object Directory,Name,CreationTime,LastAccessTime,Length,Extension
