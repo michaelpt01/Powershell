@@ -1,0 +1,12 @@
+Enter Recovery Mode
+diskpart
+list disk
+select disk 0
+list part
+select part 1
+clean
+create part primary
+assign
+active
+exit
++
