@@ -1,0 +1,22 @@
+# PowerShell script to backup all GPOs in the domain to a specified path
+
+# Define the backup path
+$BackupPath = "C:\GPO_Backups"
+
+# Check if the backup path exists, if not, create it
+if (-not (Test-Path -Path $BackupPath)) {
+    New-Item -Path $BackupPath -ItemType Directory
+}
+
+# Get all GPOs in the domain
+$GPOs = Get-GPO -All
+
+# Loop through each GPO and back it up
+foreach ($GPO in $GPOs) {
+    $backupId = (Get-Date -Format yyyyMMddHHmmss) + "_" + $GPO.Id
+    $GPOBackupPath = Join-Path -Path $BackupPath -ChildPath $backupId
+    Backup-GPO -Guid $GPO.Id -Path $GPOBackupPath -Comment "Backup taken on $(Get-Date -Format F)"
+    Write-Host "Backed up GPO: $($GPO.DisplayName) to $($GPOBackupPath)"
+}
+
+Write-Host "All GPOs have been backed up to $BackupPath"
