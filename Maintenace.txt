@@ -1,0 +1,20 @@
+Subject: Update on VDI Issues and Upcoming Optimizations
+
+Dear All,
+
+I wanted to provide an update on the recent Virtual Desktop Infrastructure (VDI) issues that have been impacting our users and the steps we are taking to resolve them.
+
+1. Horizon Client Crashes:
+   Our team has been investigating the frequent crashes experienced by users when accessing their virtual desktops through the Horizon client. We have identified the root cause and are currently working on implementing a fix. We expect to have this resolved within the next 24 hours. In the meantime, if you encounter a crash, please try reconnecting to your virtual desktop. If the issue persists, please reach out to the IT Service Desk for assistance.
+
+2. Licensing Issues:
+   We are aware of the licensing issues that have been preventing some users from accessing their virtual desktops. Our team is actively working with our vendor to resolve these issues and ensure that all users have the necessary licenses to access their desktops. We appreciate your patience as we work to resolve this matter.
+
+3. Optimized Experience for [Department Name]:
+   I am pleased to announce that on Thursday night, we will be rolling out a new optimized VDI experience for the [Department Name] department. This optimization will include improved performance, faster login times, and a more user-friendly interface. The rollout will take place during off-hours to minimize any disruption to your work. If you have any questions or concerns about this upcoming change, please don't hesitate to reach out to our team.
+
+We apologize for any inconvenience these issues may have caused and appreciate your understanding as we work to resolve them. If you have any further questions or concerns, please feel free to contact the IT Service Desk.
+
+Thank you,
+[Your Name]
+IT Department
